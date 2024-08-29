@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Blog Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a Blog site where users can explore posts from various users and add new posts. The application provides a user-friendly interface to interact with a list of posts and users, and to create new posts that will be visible on the home page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Home Page**: View all posts.
+- **Post Page**: Click on a post title to view details.
+- **Users Page**: View a list of users who have posts.
+- **User Page**: Click on a user to view their posts.
+- **Add New Post Form Page**: Use the form to add a new post.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: For building the user interface.
+- **React Router**: For handling routing within the application.
+- **RTK Redux**: For state management and making API requests.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Backend API
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This project uses the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) as a mock backend. JSONPlaceholder is a free online REST API that you can use for testing and prototyping. It provides endpoints for common resources such as posts, comments, users, and more. 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Key Endpoints Used
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Posts**: `/posts` – Fetches a list of posts or a single post by ID.
+- **Users**: `/users` – Retrieves a list of users or a specific user by ID.
+
+For detailed information about the available endpoints and their usage, refer to the [JSONPlaceholder Documentation](https://jsonplaceholder.typicode.com/).
+
+## Setup and Installation
+
+To get started with this project, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Manahil-04/Blog-App.git
+   cd blog-project
+
+2. **Install dependencies**:
+    ```bash
+    npm install
+
+3. **Start the development server**:
+    ```bash
+    npm start dev
+  Open your browser and go to http://localhost:5173 to view the application.
